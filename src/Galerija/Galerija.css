@@ -1,0 +1,55 @@
+.mainGalleryContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.galleryContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1230px;
+}
+.galleryNav{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.photoGridContainer {
+    max-width: 1230px; /* Adjust this value as needed */
+    margin: 0 auto; /* Centers the grid on the page */
+}
+
+.photoGrid {
+    column-count: 3; /* Adjusted to 3 columns */
+    column-gap: 15px; /* Gap between columns */
+}
+
+.galleryPhoto {
+    width: 100%;
+    margin-bottom: 15px; /* Adds spacing between rows */
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    break-inside: avoid; /* Prevents overlapping of photos */
+    object-fit: cover;
+}
+
+.galleryPhoto:hover {
+    transform: scale(1.05);
+}
+
+.galleryButton{
+    background-color: var(--grey);
+    transition: background-color 0.3s;
+}
+
+.galleryButton:hover{
+    background-color:#3b664a;
+}

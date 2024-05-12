@@ -1,0 +1,92 @@
+.contactsHeaderContainer {
+    display: grid;
+    height: 30vh;
+    width: 100%;
+    align-items: center;
+    overflow: hidden; /* Ensures no overflow */
+}
+
+.contactsHeaderBackgroundImage {
+    width: 100%;
+    object-fit: cover;
+    height: inherit;
+    filter: brightness(50%);
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.contactsHeader{
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 2;
+    text-align: center;
+    font-size: 2em;
+}
+.contactPageContainer{
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    max-width: 1230px;
+    margin: auto;
+    column-gap: 3rem;
+    align-items: center;
+}
+
+.contactPageForm{
+    background-color: var(--green);
+    padding: 3rem;
+    border-radius: 50px;
+    margin: 20px;
+    box-shadow: 10px 10px 10px  rgb(207, 207, 207);
+}
+
+.contactPageForm input, .contactPageForm textarea{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 0px;
+    color: var(--grey);
+}
+
+.sendMessageButton{
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: var(--grey);
+}
+.sendMessageButton:active{
+    scale: 0.9
+}
+
+.contactPagePersonImage{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 100px;
+    margin: 20px;
+}
+
+.contactPageContacts{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.contactPageContacts p{
+    color: var(--grey)
+}
+
+@media (max-width: 640px) {
+    .contactPageContainer{
+        grid-template-columns: 1fr;
+    }
+    .contactPageContacts{
+        grid-column: 1;
+    }
+    .contactPageForm{
+        grid-column: 2;
+    }
+}

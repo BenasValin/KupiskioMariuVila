@@ -1,0 +1,49 @@
+.mainFooterContainer{
+    background-color: var(--darkBlue);
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-bottom: 3rem;
+}
+.footerContainer{
+   
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+@media (max-width: 640px){
+    .footerContainer{
+        grid-template-columns: auto;
+    }
+}
+.footerContacts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.footerRekvizitai{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footerNav{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerNav > *{
+    text-decoration: none;
+    line-height: 2rem;
+}
+.footerWrapper{
+    max-width: 1230px;
+    width: 100%;
+    display: grid;
+}
+.footerSocialMedia{
+    line-height: 2rem;
+}

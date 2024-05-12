@@ -1,0 +1,211 @@
+.reservationHeaderContainer{
+    display: grid;
+    height: 30vh;
+    width: 100vw;
+    align-items: center;
+}
+
+.reservationHeaderBackgroundImage{
+    width: 100%;
+    object-fit: cover;
+    height: inherit;
+    filter: brightness(50%);
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.reservationHeader{
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 2;
+    text-align: center;
+    font-size: 2em;
+    width: auto;
+    display: absolute;
+    left: 50%;
+    max-width: 1320px;
+}
+
+.reservationHeaderPicks{
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    max-width: 1230px;
+    height: 2em;
+    background-color: var(--blue);
+    z-index: 5;
+    text-align: center;
+}
+
+
+
+  .reservationHeader{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-self: center;
+    width: fit-content;
+    border-radius: 9999px;
+    align-items: center;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+  }
+
+  .personIcon{
+    height: 40px;
+  margin-top: -5px;
+  }
+
+  .reservationHousesContainer{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reservationHouses{
+    max-width: 1230px;
+    width: 100%;
+  }
+
+  .houseExample{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    align-items: center;
+  }
+
+  .houseExampleDescriptionContainer{
+    color: var(--grey);
+    border-radius: 40px;
+  }
+  .houseExampleDescriptionContainer > *{
+    color: var(--grey);
+  }
+
+  .price{
+    color: var(--blue);
+    font-size: 1.8rem;
+  }
+  .headerCalendarWrap{
+    width: fit-content;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 9999px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 500px){
+    .reservationHeader{
+      grid-template-columns: auto;
+      border-radius: 40px;
+    }
+  }
+
+  .CalendarMonth_caption * ,.CalendarMonth_caption_1 *{
+    color: var(--grey)
+  }
+  .DayPicker_weekHeader_li *,.DayPicker_weekHeader_li_1 *{
+    color: var(--grey)
+  }
+
+  .CalendarDayhover ,.CalendarDay_1hover ,.CalendarDay__defaulthover ,.CalendarDay__default_2:hover{
+    color: var(--grey)
+  }
+
+
+  
+  .reservationHeaderButton{
+    background-color: #5eb87e;
+    opacity: 90%;
+    margin: 8px;
+    transition: scale 0.3;
+  }
+  .reservationHeaderButton:hover{
+    opacity: 70%;
+  }
+
+  .reservationHeaderButton:active{
+    scale: 0.95;
+  }
+
+  .reservationInstructionsContainer{
+    display: grid;
+    width: 100vw;
+    text-align: center;
+    background-color: var(--darkBlue);
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
+
+  .reservationInstructions{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+    max-width: 1230px;
+    margin: 0 auto;
+  }
+.instructionStepContainer{
+  padding: 2rem;
+}
+
+  .instructionStep{
+    width: 70px;
+    height: 70px;
+    background-color: var(--lightBlue);
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+   .CalendarDay__blocked_out_of_range ,.CalendarDay__blocked_out_of_range_5{
+    background-color: rgba(235, 235, 235, 0.568);
+   }
+  .instructionIcon{
+    width: 70%;
+  }
+
+  .past-day {
+    background-color: grey;
+    color: white; /* Adjust to your liking */
+    opacity: 0.5;
+}
+
+.houseSpecifications{
+  display: flex;
+  height: 1.2rem;
+  font-weight: 800;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.houseSpecifications img{
+  height: 100%;
+}
+@media (max-width: 800px){
+  .houseExample{
+    grid-template-columns: 1fr;
+  }
+}
+
+.houseDescription > *{
+color: var(--grey)
+}
+.houseDescription{
+  margin: 2rem 0 2rem
+}
+
+.reservationDescription{
+  opacity: 90%;
+}
