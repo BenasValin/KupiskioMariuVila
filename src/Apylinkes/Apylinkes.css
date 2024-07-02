@@ -1,0 +1,16 @@
+.apylinkesHeader>*{
+    color: var(--grey);
+}
+.apylinkesHeader{
+    text-align: center;
+}
+
+.apylinkesObjectContainer{
+    height: 300px;
+}
+
+.apylinkesTitle{
+    font-weight: 650;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}

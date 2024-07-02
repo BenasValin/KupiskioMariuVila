@@ -1,12 +1,17 @@
 .landingPageContainer {
     height: 100vh;
-    max-width: 100vw; /* Keep this at 100vw */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 2;
+    background: linear-gradient(to right, #0000009f 30%, rgba(0, 0, 0, 0.192) 100%), 
+     url(../Images/pagrinidispastatas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    top: 50%;
 }
 
 .backgroundWithFilter {
@@ -15,27 +20,31 @@
     background-size: cover;
     background-position: center;
     object-fit: cover;
-    filter: brightness(50%);
     z-index: -1;
-    background-image: url(../Images/pagrinidispastatas.jpg);
 }
 
 .aplinkaButtonLanding {
 	background-color: #171717;
 }
 
+.greenText {
+	color: var(--green);
+}
 
 .titleContainer {
-	width: 100vw;
     position: absolute;
+	max-width: 95vw;
+	width: fit-content;
+	text-wrap: wrap;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
     color: black;
     border-radius: 30px;
     z-index: 1;
 }
+
 .additionalPhotos {
 	height: 200px;
 	margin-top: 10px;
@@ -50,23 +59,26 @@
 	max-height: 70%;
 	border-radius: 20px;
 	margin: auto;
-	filter: brightness(60%);
 	margin-right: 2%;
 	margin-left: 2%;
 	margin-top: 40px;
 }
 
 .title {
-	font-size: 7em;
+	font-size: 5em;
 	color: rgb(238, 235, 227);
-	margin: 2rem
-
+	margin: 1rem 0 1rem;
+	width: fit-content;
+	max-width: 800px;
+	font-weight: 700;
 }
 
-@media (max-width: 750px) {
-	.title {
-		font-size: 3em;
-	}
+.secondaryTitle {
+	color: rgb(212, 212, 212);
+}
+
+.greenText{
+	color: var(--green)
 }
 
 .titleText {
@@ -85,15 +97,13 @@
 	cursor: pointer;
 }
 
-
-
 .shortDescription {
 	max-width: 700px;
 	display: flex;
 	flex-direction: column;
 	height: fit-content;
 	margin-top: 0;
-	margin: 50px;
+	margin: 2rem;
 	width: 100%;
 	justify-content: center;
 	align-items: center;
@@ -109,12 +119,22 @@
 	align-items: center;
 	justify-content: center;
 	padding-bottom: 30px;
+	border-bottom-right-radius: 7rem;
+	border-bottom-left-radius: 7rem;
 }
 
 .shortDescriptionLogo {
 	height: 100px;
 	object-fit: contain;
-	margin: 15px;
+}
+
+.shortDescriptionLogoContainer {
+	position: relative;
+	margin-bottom: -100px;
+	margin-top: 10px;
+	background-color: var(--lightBlue);
+	border-radius: 5rem;
+	padding: 1rem;
 }
 
 .servicesContainer {
@@ -124,6 +144,7 @@
 	overflow: hidden;
     justify-content: center;
 }
+
 .services {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -133,17 +154,19 @@
 	row-gap: 2rem;
 }
 
-
 .card {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centers the child elements horizontally */
-    justify-content: end; /* Centers the child elements vertically */
     width: 100%; /* Takes full width of its parent container */
     border-radius: 30px;
     background-color: var(--darkBlue);
+	z-index: 99;
+	cursor: pointer;
 }
-.cardIcon{
+
+
+.cardIcon {
 	width: 100%;           /* Ensures the image takes up the full width of its container */
     height: auto;          /* Maintains the aspect ratio */
     object-fit: cover;     /* Covers the area of the card without stretching the image */
@@ -154,16 +177,16 @@
 	border-bottom-right-radius: 0px;
 }
 
-.cardText{
+.cardText {
 	margin: 30px;
-	margin-top: 15px;
+	margin-top: 5px;
 	opacity: 90%;
+	line-height: 28px;
 }
 
 .cardTitle {
 	font-weight: 600;
-	margin-top: 40px;
-	
+	margin-top: 20px;
 }
 
 .outdoorActivitiesButton {
@@ -182,10 +205,7 @@
 	justify-content: center;
 	display: flex;
 	width: 100%;
-
-
 }
-
 .houses {
 	max-width: 1230px;
 	justify-content: center;
@@ -193,7 +213,6 @@
 	flex-direction: column;
 	width: 100%;
 }
-
 .housesImage {
 	max-width: 100%;
 	height: auto;
@@ -206,23 +225,21 @@
 	color: var(--grey);
 	font-size: 3em;
 }
-
 .zvejuNamelis {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	margin-bottom: 4rem;
 }
-
 .privalumaiCard {
 	border-radius: 40px;
-	background-color: var();
+	background-color: var(--green);
 	width: 100%;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background-color: var(--green);
 	max-width: 900px;
 }
 
@@ -273,17 +290,18 @@
 	row-gap: 2rem;
 }
 
-
-.outdoorActivitiesWrapper{
+.outdoorActivitiesWrapper {
 	max-width: 1230px;
 	width: 100%;
 	place-content: center;
 }
-.outdoorActivitesTextContainer{
+
+.outdoorActivitesTextContainer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 150px;
 }
+
 .aboutUsContainer {
 	background-color: var(--lightBlue);
 	margin-top: -100px;
@@ -299,7 +317,6 @@
 	padding-top: 200px;
 	padding-bottom: 50px;
 	column-gap: 150px;
-
 }
 
 .aboutUsImage {
@@ -307,7 +324,7 @@
 	border-radius: 20px;
 }
 
-.comfortContainer{
+.comfortContainer {
 	display: grid;
     place-content: center;
     max-width: 1230px;
@@ -315,26 +332,26 @@
     width: 100%;
 }
 
-.comfort{
+.comfort {
 	display: grid;
 	grid-template-columns: 2fr 3fr;
 	place-content: center;
 	column-gap: 2rem;
 	align-items: center;
 }
-.comfort >*{
-	color: var(--grey)
+
+.comfort > * {
+	color: var(--grey);
 }
 
-
-.comfortImage{
+.comfortImage {
 	object-fit: cover;
 	width: 90%;
 	border-radius: 10px;
 	margin: 0 auto;
-
 }
-.comfortNumber{
+
+.comfortNumber {
 	width: fit-content;
 	height: fit-content;
 	padding: 12px;
@@ -345,43 +362,55 @@
 	font-size: 1.3rem;
 }
 
-.housesTitle{
+.housesTitle {
 	margin-bottom: 0.5rem;
-	
 }
 
 @media (max-width: 850px) {
-	.services {
-		grid-template-columns: 1fr;
-	}
-}
-@media (max-width: 640px){
-	.outdoorActivities{
+	.outdoorActivities {
 		grid-template-columns: 1fr;
 		align-items: center;
 	}
-	.card{
+	.card {
 		margin: 0 auto;
 		width: 90%;
 	}
-	.outdoorActivitesTextContainer{
+	.outdoorActivitesTextContainer {
 		grid-template-columns: 1fr;
 	}
-	
+	.services {
+		grid-template-columns: 1fr;
+	}
+	.title{
+		font-size: 4rem;
+	}
 }
 
 @media (max-width: 750px) {
 	.title {
-		font-size: 4em;
+		font-size: 3em;
+		width: 300px;
 	}
-	.aboutUsImage{
+	.aboutUsImage {
 		display: none;
 	}
-	.aboutUs{
+	.aboutUs {
 		grid-template-columns: 1fr;
 		column-gap: 0px;
 	}
-	.comfort{
+	.comfort {
 		grid-template-columns: 1fr;
 	}
+}
+
+@media (max-width: 400px) {
+	.title{
+		font-size: 3rem;
+	}
+}
+@media (max-width: 350px) {
+	.title{
+		font-size: 2.5rem;
+	}
+	
 }

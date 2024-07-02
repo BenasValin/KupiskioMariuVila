@@ -18,7 +18,7 @@
     object-fit: cover;
     grid-column: 1;
     grid-row: 1;
-    aspect-ratio: 15/11;
+    aspect-ratio: 13/11;
 }
 
 .photoGalleryNav {
@@ -55,6 +55,9 @@
     display: flex;
     align-items: center;
     padding: 10px;
+    padding-left: 15px;
     max-width: 200px;
+    padding-right: 15px;
+    text-wrap:wrap;
 }
 

@@ -1,211 +1,340 @@
-.reservationHeaderContainer{
-    display: grid;
-    height: 30vh;
-    width: 100vw;
-    align-items: center;
+/* General Styles */
+:root {
+  --grey: #333; /* Example color, replace with actual value */
+  --blue: #0056b3; /* Example color, replace with actual value */
+  --green: #5eb87e; /* Example color, replace with actual value */
+  --darkBlue: #345078; /* Example color, replace with actual value */
 }
 
-.reservationHeaderBackgroundImage{
-    width: 100%;
-    object-fit: cover;
-    height: inherit;
-    filter: brightness(50%);
-    grid-column: 1;
-    grid-row: 1;
+/* Reservation Header Styles */
+.reservationHeaderContainer {
+  display: grid;
+  height: 50vh;
 }
 
-.reservationHeader{
-    grid-row: 1;
-    grid-column: 1;
-    z-index: 2;
-    text-align: center;
-    font-size: 2em;
-    width: auto;
-    display: absolute;
-    left: 50%;
-    max-width: 1320px;
+.reservationHeaderBackgroundImage {
+  width: 100%;
+  object-fit: cover;
+  height: inherit;
+  filter: brightness(50%);
+  grid-column: 1;
+  grid-row: 1;
+  border-bottom-left-radius: 6rem;
+  border-bottom-right-radius: 6rem;
 }
 
-.reservationHeaderPicks{
-    grid-row: 1;
-    grid-column: 1;
-    width: 100%;
-    max-width: 1230px;
-    height: 2em;
-    background-color: var(--blue);
-    z-index: 5;
-    text-align: center;
+.reservationHeaderPicks {
+  grid-row: 1;
+  grid-column: 1;
+  height: 2em;
+  z-index: 5;
+  text-align: center;
 }
 
+.reservationHeader {
+  grid-row: 1;
+  grid-column: 1;
+  z-index: 2;
+  font-size: 2em;
+  display: grid;
+  text-align: center;
+  grid-template-columns: auto;
+  justify-self: center;
+  width: fit-content;
+  border-radius: 9999px;
+  align-items: center;
+  width: 100%;
+}
 
+.reservationHeaderTitle {
+  margin: 1.5rem auto 3rem;
+}
 
-  .reservationHeader{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-self: center;
-    width: fit-content;
-    border-radius: 9999px;
-    align-items: center;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    
-  }
-
-  .personIcon{
-    height: 40px;
+.personIcon {
+  height: 40px;
   margin-top: -5px;
-  }
-
-  .reservationHousesContainer{
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .reservationHouses{
-    max-width: 1230px;
-    width: 100%;
-  }
-
-  .houseExample{
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    column-gap: 2rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    align-items: center;
-  }
-
-  .houseExampleDescriptionContainer{
-    color: var(--grey);
-    border-radius: 40px;
-  }
-  .houseExampleDescriptionContainer > *{
-    color: var(--grey);
-  }
-
-  .price{
-    color: var(--blue);
-    font-size: 1.8rem;
-  }
-  .headerCalendarWrap{
-    width: fit-content;
-    background-color: white;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 9999px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @media (max-width: 500px){
-    .reservationHeader{
-      grid-template-columns: auto;
-      border-radius: 40px;
-    }
-  }
-
-  .CalendarMonth_caption * ,.CalendarMonth_caption_1 *{
-    color: var(--grey)
-  }
-  .DayPicker_weekHeader_li *,.DayPicker_weekHeader_li_1 *{
-    color: var(--grey)
-  }
-
-  .CalendarDayhover ,.CalendarDay_1hover ,.CalendarDay__defaulthover ,.CalendarDay__default_2:hover{
-    color: var(--grey)
-  }
-
-
-  
-  .reservationHeaderButton{
-    background-color: #5eb87e;
-    opacity: 90%;
-    margin: 8px;
-    transition: scale 0.3;
-  }
-  .reservationHeaderButton:hover{
-    opacity: 70%;
-  }
-
-  .reservationHeaderButton:active{
-    scale: 0.95;
-  }
-
-  .reservationInstructionsContainer{
-    display: grid;
-    width: 100vw;
-    text-align: center;
-    background-color: var(--darkBlue);
-    border-bottom-left-radius: 3rem;
-    border-bottom-right-radius: 3rem;
-  }
-
-  .reservationInstructions{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    text-align: center;
-    max-width: 1230px;
-    margin: 0 auto;
-  }
-.instructionStepContainer{
-  padding: 2rem;
 }
 
-  .instructionStep{
-    width: 70px;
-    height: 70px;
-    background-color: var(--lightBlue);
-    border-radius: 20px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-   .CalendarDay__blocked_out_of_range ,.CalendarDay__blocked_out_of_range_5{
-    background-color: rgba(235, 235, 235, 0.568);
-   }
-  .instructionIcon{
-    width: 70%;
-  }
-
-  .past-day {
-    background-color: grey;
-    color: white; /* Adjust to your liking */
-    opacity: 0.5;
-}
-
-.houseSpecifications{
+/* Reservation Houses Container */
+.reservationHousesContainer {
   display: flex;
-  height: 1.2rem;
-  font-weight: 800;
-  font-size: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reservationHouses {
+  max-width: 1230px;
+}
+
+.houseExample {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  column-gap: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   align-items: center;
 }
 
-.houseSpecifications img{
-  height: 100%;
+/* House Example Description */
+.houseExampleDescriptionContainer {
+  color: var(--grey);
+  border-radius: 40px;
+  width: 95%;
+  margin: 0 auto;
+  height: fit-content;
 }
-@media (max-width: 800px){
-  .houseExample{
-    grid-template-columns: 1fr;
+
+.houseExampleDescriptionContainer > * {
+  color: var(--grey);
+}
+
+.price {
+  color: var(--grey);
+  font-size: 1.8rem;
+  font-weight: 550;
+}
+
+/* Calendar Wrap */
+.headerCalendarWrap {
+  width: fit-content;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 9999px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 500px) {
+  .reservationHeader {
+      grid-template-columns: auto;
+      border-radius: 40px;
   }
 }
 
-.houseDescription > *{
-color: var(--grey)
-}
-.houseDescription{
-  margin: 2rem 0 2rem
+/* Calendar Styles */
+.CalendarMonth_caption *,
+.CalendarMonth_caption_1 *,
+.DayPicker_weekHeader_li *,
+.DayPicker_weekHeader_li_1 *,
+.CalendarDayhover,
+.CalendarDay_1hover,
+.CalendarDay__defaulthover,
+.CalendarDay__default_2:hover {
+  color: var(--grey);
 }
 
-.reservationDescription{
+.CalendarDay__blocked_out_of_range {
+  background-color: rgba(235, 235, 235, 0.568);
+}
+
+.CalendarDay__blocked_out_of_range:hover {
+  cursor: not-allowed;
+  background-color: rgba(235, 235, 235, 0.568);
+}
+
+/* Reservation Header Button */
+.reservationHeaderButton {
+  background-color: #5eb87e;
   opacity: 90%;
+  margin: 8px;
+  transition: scale 0.3;
+}
+
+.reservationHeaderButton:hover {
+  opacity: 70%;
+}
+
+.reservationHeaderButton:active {
+  scale: 0.95;
+}
+
+/* Reservation Instructions */
+.reservationInstructionsContainer {
+  display: grid;
+  text-align: center;
+  background-color: #345078d8;
+  border-bottom-left-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  width: 100%;
+  margin-top: auto;
+}
+
+.reservationInstructions {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5rem;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  margin-top: -50px;
+  max-width: 1230px;
+}
+
+@media (max-width: 800px) {
+  .reservationInstructions {
+      column-gap: 2rem;
+  }
+}
+
+/* Instruction Step */
+.instructionStepContainer {
+  column-gap: auto;
+}
+
+.instructionStep {
+  width: 70px;
+  height: 70px;
+  background-color: var(--green);
+  border-radius: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.041);
+  transition: transform 0.5s;
+}
+
+.instructionIcon {
+  width: 60%;
+}
+
+.kontaktaiInstructionStep:hover {
+  transform: translateY(-8px);
+  cursor: pointer;
+}
+
+.past-day {
+  background-color: grey;
+  color: white;
+  opacity: 0.5;
+}
+.houseSpecifications {
+  display: flex;
+  gap: 2rem;
+  position: relative; /* Ensure the dropdown is positioned relative to its container */
+}
+
+.houseSpecificationsDropdownButton img {
+  height: 100%;
+}
+
+.houseSpecificationsDropdownButton {
+  height: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 1.25rem;
+  background-color: var(--green);
+  position: relative; /* Ensure the dropdown content is positioned relative to this button */
+  transition: transform 0.3s, border-bottom-right-radius 0.3s, border-bottom-left-radius 0.3s;
+}
+.houseSpecificationsDropdownButton:hover{
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  transform: translateY(5px);
+}
+.houseSpecificationsDropdownButton:hover .houseSpecificationsDropdown {
+  opacity: 100%;
+  visibility: visible;
+  
+}
+.houseSpecificationsContainer{
+  display: flex;
+  gap: 1rem;
+}
+.houseSpecificationsDropdown {
+  position: absolute;
+  background-color: var(--green);
+  padding: 10px;
+  width: 300px;
+  font-size: 1rem;
+  opacity: 0%;
+  top: 100%; /* Position the dropdown content below the button */
+  left: 0; /* Align the dropdown content to the left of the button */
+  border-bottom-left-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  visibility: hidden;
+  line-height: 1.5rem;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+@media (max-width: 800px) {
+  .houseExample {
+      grid-template-columns: 1fr;
+  }
+
+  .houseExampleDescriptionContainer {
+      grid-row: 1;
+  }
+}
+
+.houseDescription > * {
+  color: var(--grey);
+  line-height: 1.3rem;
+}
+
+.houseDescription {
+  margin: 2rem 0 2rem;
+}
+
+.reservationDescription {
+  opacity: 90%;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+.reservationInstructionTitle {
+  font-size: 1.8rem;
+  position: relative;
+  top: -45px;
+  background-color: var(--darkBlue);
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+}
+
+.reservationStepTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 400px) {
+  .reservationInstructionTitle {
+      font-size: 1.5rem;
+  }
+
+  .reservationHeaderTitle {
+      font-size: 3rem;
+  }
+
+  .instructionStep {
+      width: 50px;
+      height: 50px;
+  }
+
+  .reservationStepTitle {
+      font-size: 0.9rem;
+  }
+
+  .reservationDescription {
+      font-size: 0.8rem;
+  }
+
+  .reservationHeaderTitle {
+      font-size: 2.5rem;
+  }
 }

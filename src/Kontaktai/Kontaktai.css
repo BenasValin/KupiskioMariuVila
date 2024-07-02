@@ -3,7 +3,7 @@
     height: 30vh;
     width: 100%;
     align-items: center;
-    overflow: hidden; /* Ensures no overflow */
+    overflow: hidden;
 }
 
 .contactsHeaderBackgroundImage {
@@ -15,78 +15,175 @@
     grid-row: 1;
 }
 
-.contactsHeader{
+.contactsHeader {
     grid-row: 1;
     grid-column: 1;
     z-index: 2;
     text-align: center;
-    font-size: 2em;
+    font-size: 3.5em;
+    font-weight: 600;
+    
 }
-.contactPageContainer{
-    height: auto;
+.contactPageContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100vw;
     max-width: 1230px;
     margin: auto;
     column-gap: 3rem;
-    align-items: center;
+    align-items: flex-start;
+    padding: 3rem 1rem;
 }
 
-.contactPageForm{
-    background-color: var(--green);
-    padding: 3rem;
-    border-radius: 50px;
-    margin: 20px;
-    box-shadow: 10px 10px 10px  rgb(207, 207, 207);
+.contactPageForm {
+    padding: 2rem;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 3rem;
 }
 
-.contactPageForm input, .contactPageForm textarea{
+.contactPageForm input, .contactPageForm textarea {
     border: none;
     border-radius: 5px;
-    padding: 5px;
-    padding-right: 0px;
+    padding: 0.5rem;
+    background-color: hsl(43, 100%, 99%);
+    margin-bottom: 1rem;
+    color: var(--grey);
+    width: 100%;  /* Ensure all input fields have the same width */
+    box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.192);
+}
+.contactPageForm input{
+    border-radius: 9999px;
+}
+.contactPageForm textarea{
+    border-radius: 20px;
+}
+.contactPageForm>*{
+    color: var(--grey)
+}
+.contactFormName > div > input {
+    width: 100%;  /* Ensure name and surname fields are 100% width within their parent */
+}
+
+.fullWidth {
+    width: calc(100%-1rem);
+}
+
+.sendMessageButton {
+    background-color: var(--green);
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 999px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin: 0 auto
+}
+
+.sendMessageButton:active {
+    transform: scale(0.95);
+}
+
+.contactFormName {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+}
+
+.formLabel {
+    font-size: 1.3rem;
+    margin: 1.3rem 0 0.5rem;
     color: var(--grey);
 }
 
-.sendMessageButton{
-    margin-left: 0px;
-    margin-bottom: 0px;
-    margin-top: 20px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    background-color: var(--grey);
-}
-.sendMessageButton:active{
-    scale: 0.9
+.formGroup {
+    display: flex;
+    flex-direction: column;
 }
 
-.contactPagePersonImage{
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 50%;
-    height: 100px;
-    margin: 20px;
+.contactPageContacts {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex: 1;
 }
 
-.contactPageContacts{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
+
+.contactPerson {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
-.contactPageContacts p{
-    color: var(--grey)
+.contactTitle {
+    margin: 0;
+    font-size: 1.7rem;
+    color: black;
 }
 
-@media (max-width: 640px) {
-    .contactPageContainer{
+.contactName, .contactPhone {
+    margin: 0.25rem 0;
+    opacity: 0.6;
+}
+
+.letsTalk {
+    color: var(--grey);
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin: 2.5em 0 0;
+    letter-spacing: -1px;
+}
+.admininstratorContactsContainer{
+    background-color: var(--lightBlue);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.192);
+}
+.contactPageInformation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 3rem;
+}
+.contactDescription {
+    text-align: center;
+    opacity: 90%;
+    color: var(--grey);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.companyInfo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    line-height: 1.5rem;
+}
+
+@media (max-width: 800px) {
+    .contactPageContainer {
         grid-template-columns: 1fr;
     }
-    .contactPageContacts{
-        grid-column: 1;
+    .contactPageContacts {
+        margin: 0 auto 3rem;
     }
-    .contactPageForm{
-        grid-column: 2;
+    .contactFormName {
+        grid-template-columns: 1fr;
     }
+}
+
+.greyFont{
+    color: var(--grey)
+}
+.inputFieldHeader{
+    margin: 5px 0 2px 8px;
 }

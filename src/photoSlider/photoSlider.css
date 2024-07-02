@@ -1,0 +1,69 @@
+.photoSliderContainer {
+    overflow-x: hidden; /* Changed from scroll to hidden */
+    width: 100%;
+    height: 300px;
+    background-color: var(--sand);
+    position: relative; /* Added to position buttons correctly */
+}
+
+.photoSliderWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Changed to flex-start */
+    align-items: center;
+    height: 100%;
+    gap: 1rem;
+    overflow-x: scroll; /* Added scroll to the wrapper */
+    scroll-behavior: smooth; /* Added smooth scroll behavior */
+}
+
+.photoSliderImage {
+    height: 100%;
+    border-radius: 1rem;
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.sliderButton {
+    background-color: transparent;
+    z-index: 99;
+    position: absolute; /* Changed to absolute for positioning */
+    top: 50%;
+    transform: translateY(-50%);
+    border: none; /* Removed default button border */
+    cursor: pointer; /* Added cursor pointer */
+}
+
+.sliderButton1 {
+    left: 20px; /* Position to the left */
+    transform: rotate(90deg);
+}
+
+.sliderButton2 {
+    right: 20px; /* Position to the right */
+    transform: rotate(270deg);
+}
+
+.sliderButton img {
+    width: 36px; /* Adjust size of the arrow */
+    height: auto;
+}
+.photoSliderWrapper::-webkit-scrollbar {
+    height: 12px; /* Adjust the height of the scrollbar */
+}
+
+/* Style the scrollbar track */
+.photoSliderWrapper::-webkit-scrollbar-track {
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the horizontal scrollbar thumb */
+.photoSliderWrapper::-webkit-scrollbar-thumb:horizontal {
+    background-color: var(--green); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid var(--sand)
+}
+
+/* Optional: Style the scrollbar thumb on hover */
+.photoSliderWrapper::-webkit-scrollbar-thumb:hover {
+    background-color: var(--green); /* Change color on hover */
+}

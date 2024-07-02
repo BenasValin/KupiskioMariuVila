@@ -65,12 +65,12 @@ function Galerija() {
             <div className="mainGalleryContainer">
                 <div className="galleryContainer">
                     <div className="galleryNav">
-                        <button onClick={handleVisosNuotraukos} style={activeButton == 'visosNuotraukos' ? {backgroundColor: "var(--green)"} : {}} className="button galleryButton">Visos nuotraukos</button>
-                        <button onClick={handlePagrindinisPastatas} style={activeButton == 'pagrindinisPastatas' ? {backgroundColor: "var(--green)"} : {}} className="button galleryButton">Pagrindinis pastatas</button>
-                        <button onClick={handlePirtiesPastatas} style={activeButton == 'pirtiesPastatas' ? {backgroundColor: "var(--green)"} : {}} className="button galleryButton">Pirties pastatas</button>
-                        <button onClick={handleZvejuNamelis} style={activeButton == 'zvejuNamelis' ? {backgroundColor: "var(--green)"} : {}} className="button galleryButton">Žvejų namelis</button>
-                        <button onClick={handleVilosAplinka} style={activeButton == 'vilosAplinka' ? {backgroundColor: "var(--green)"} : {}} className="button galleryButton">Vilos Aplinka</button>
-                        <button onClick={handlemMariuAplinka} style={activeButton == 'mariuAplinka' ? {backgroundColor: "var(--green)"} : {}} className="button galleryButton">Marių aplinka</button>
+                        <button onClick={handleVisosNuotraukos} style={activeButton == 'visosNuotraukos' ? {backgroundColor: "var(--green)"} : {color: "var(--grey)"}} className="button galleryButton">Visos nuotraukos</button>
+                        <button onClick={handlePagrindinisPastatas} style={activeButton == 'pagrindinisPastatas' ? {backgroundColor: "var(--green)"} : {color: "var(--grey)"}} className="button galleryButton">Pagrindinis pastatas</button>
+                        <button onClick={handlePirtiesPastatas} style={activeButton == 'pirtiesPastatas' ? {backgroundColor: "var(--green)"} : {color: "var(--grey)"}} className="button galleryButton">Pirties pastatas</button>
+                        <button onClick={handleZvejuNamelis} style={activeButton == 'zvejuNamelis' ? {backgroundColor: "var(--green)"} : {color: "var(--grey)"}} className="button galleryButton">Žvejų namelis</button>
+                        <button onClick={handleVilosAplinka} style={activeButton == 'vilosAplinka' ? {backgroundColor: "var(--green)"} : {color: "var(--grey)"}} className="button galleryButton">Vilos Aplinka</button>
+                        <button onClick={handlemMariuAplinka} style={activeButton == 'mariuAplinka' ? {backgroundColor: "var(--green)"} : {color: "var(--grey)"}} className="button galleryButton">Marių aplinka</button>
                     </div>
                 </div>
                 <div className="photoGridContainer">

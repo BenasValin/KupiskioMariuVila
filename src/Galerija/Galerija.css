@@ -14,11 +14,14 @@
 }
 .galleryNav{
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 999px;
+    background-color: transparent;
 }
+
 
 .photoGridContainer {
     max-width: 1230px; /* Adjust this value as needed */
@@ -26,6 +29,8 @@
 }
 
 .photoGrid {
+    margin: 0 auto;
+    width: 95%;
     column-count: 3; /* Adjusted to 3 columns */
     column-gap: 15px; /* Gap between columns */
 }
@@ -46,10 +51,27 @@
 }
 
 .galleryButton{
-    background-color: var(--grey);
-    transition: background-color 0.3s;
+    background-color: #cfc8b0;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
 }
 
-.galleryButton:hover{
-    background-color:#3b664a;
+
+@media (max-width: 900px){
+    .photoGrid{
+        column-count: 2;
+    }
+}
+@media (max-width: 750px){
+    .galleryNav{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 22px;
+    }
+    
+}
+@media (max-width:600px){
+    .photoGrid{
+        column-count: 1;
+    }
 }
